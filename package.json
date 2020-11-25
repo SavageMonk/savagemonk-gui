@@ -8,8 +8,15 @@
     "start": "next start"
   },
   "dependencies": {
+    "autoprefixer": "^10.0.2",
     "next": "10.0.3",
+    "postcss-import": "^13.0.0",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "tailwindcss": "^2.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-plugin-react": "^7.21.5"
   }
 }
