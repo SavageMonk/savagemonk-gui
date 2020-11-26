@@ -1,0 +1,11 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+    caret-color: red;
+}
+
+input:focus, textarea:focus, select:focus, button:focus{
+    outline: none;
+}
