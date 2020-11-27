@@ -8,7 +8,7 @@ export default function Layout({ children }) {
             <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
             <link rel="icon" href="/favicon.ico" />
         </Head>
-        <div className="container px-6 mx-auto mb-auto selection-color-primary">{children}</div>
+        <div className="selection-color-primary">{children}</div>
         <Footer />
     </div>
 }

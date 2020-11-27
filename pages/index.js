@@ -4,7 +4,8 @@ import TextBox from '../components/textbox';
 import ButtonPrimary from '../components/buttonPrimary';
 import TextBlock from '../components/textblock';
 import { useState } from 'react';
-import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
+import Container from '../components/container';
 
 export default function Home() {
     const router = useRouter();
@@ -14,18 +15,17 @@ export default function Home() {
         evt.preventDefault();
         router.push({
             pathname: '/search',
-            query: {q: query},
-          })
+            query: { q: query },
+        })
     }
 
 
     return (
         <Layout>
-            <div>
-                <Head>
-                    <title>SavageMonk</title>
-                </Head>
-
+            <Head>
+                <title>SavageMonk</title>
+            </Head>
+            <Container>
                 <main>
 
                     <header className="max-w-lg mx-auto my-2 pt-12">
@@ -36,8 +36,8 @@ export default function Home() {
                         <div className="max-w-xl mx-auto">
                             <form onSubmit={handleSearch}>
                                 <div className="flex">
-                                    <TextBox placeholder="search..." className="flex-grow" onChange={setQuery} value={query} />
-                                    <ButtonPrimary type="submit" className="ml-2">GO</ButtonPrimary>
+                                    <TextBox placeholder="search..." className="flex-grow min-w-0" onChange={setQuery} value={query} />
+                                    <ButtonPrimary type="submit" className="flex-shrink ml-2">GO</ButtonPrimary>
                                 </div>
                             </form>
                         </div>
@@ -63,7 +63,7 @@ export default function Home() {
                         </TextBlock>
                     </section>
                 </main>
-            </div>
+            </Container>
         </Layout>
     );
 }
